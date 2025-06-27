@@ -1,0 +1,55 @@
+{
+    "history": [
+        {"Date": "2025-06-18T04: 00: 00.000Z", "Open": 59.5699996948, "High": 59.9000015259, "Low": 58.5800018311, "Close": 58.6399993896, "Volume": 4149000, "Dividends": 0.0, "Stock Splits": 0.0
+        }
+    ],
+    "epsTrend": [
+        {"period": "0q", "current": 0.98222, "7daysAgo": 1.00151, "30daysAgo": 1.05806, "60daysAgo": 1.37468, "90daysAgo": 1.63302
+        },
+        {"period": "+1q", "current": 1.31927, "7daysAgo": 1.29944, "30daysAgo": 1.35185, "60daysAgo": 1.78897, "90daysAgo": 2.02491
+        },
+        {"period": "0y", "current": 3.69816, "7daysAgo": 3.79056, "30daysAgo": 3.82584, "60daysAgo": 5.17082, "90daysAgo": 6.06409
+        },
+        {"period": "+1y", "current": 5.66531, "7daysAgo": 5.77833, "30daysAgo": 5.96241, "60daysAgo": 7.18608, "90daysAgo": 8.15008
+        }
+    ],
+    "growthEstimates": [
+        {"period": "0q", "stockTrend": -0.5615, "indexTrend": 0.1313
+        },
+        {"period": "+1q", "stockTrend": -0.2983, "indexTrend": 0.024
+        },
+        {"period": "0y", "stockTrend": -0.42220002, "indexTrend": 0.075500004
+        },
+        {"period": "+1y", "stockTrend": 0.5319, "indexTrend": 0.1407
+        },
+        {"period": "LTG", "stockTrend": None, "indexTrend": 0.122
+        }
+    ],
+    "revenueEstimates": [
+        {"period": "0q", "avg": 7597481920, "low": 6587000000, "high": 8229000000, "numberOfAnalysts": 12, "yearAgoRevenue": 10558000000, "growth": -0.2804
+        },
+        {"period": "+1q", "avg": 7722449560, "low": 6596000000, "high": 8572000000, "numberOfAnalysts": 12, "yearAgoRevenue": 10322000000, "growth": -0.2518
+        },
+        {"period": "0y", "avg": 30476004380, "low": 27553000000, "high": 32065000000, "numberOfAnalysts": 17, "yearAgoRevenue": 40302000000, "growth": -0.24379998
+        },
+        {"period": "+1y", "avg": 31075536170, "low": 27506482180, "high": 34035846940, "numberOfAnalysts": 17, "yearAgoRevenue": 30476004380, "growth": 0.0197
+        }
+    ],
+    "earningsHistory": [
+        {"quarter": "2024-06-30T00: 00: 00.000", "epsActual": 2.24, "epsEstimate": 2.22193, "epsDifference": 0.02, "surprisePercent": 0.0081
+        },
+        {"quarter": "2024-09-30T00: 00: 00.000", "epsActual": 1.88, "epsEstimate": 1.96402, "epsDifference": -0.08, "surprisePercent": -0.0428
+        },
+        {"quarter": "2024-12-31T00: 00: 00.000", "epsActual": 0.75, "epsEstimate": 0.70215, "epsDifference": 0.05, "surprisePercent": 0.0681
+        },
+        {"quarter": "2025-03-31T00: 00: 00.000", "epsActual": 0.33, "epsEstimate": 0.4343, "epsDifference": -0.1, "surprisePercent": -0.2402
+        }
+    ],
+    "analystTargets": {
+        "current": 58.64,
+        "high": 105.0,
+        "low": 50.0,
+        "mean": 69.69053,
+        "median": 65.0
+    }
+}

@@ -1,0 +1,20 @@
+{'EARNINGS': [
+        {'quarter': '2024-06-30T00: 00: 00.000', 'epsActual': 2.24, 'epsEstimate': 2.22193, 'epsDifference': 0.02, 'surprisePercent': 0.0081
+        },
+        {'quarter': '2024-09-30T00: 00: 00.000', 'epsActual': 1.88, 'epsEstimate': 1.96402, 'epsDifference': -0.08, 'surprisePercent': -0.0428
+        },
+        {'quarter': '2024-12-31T00: 00: 00.000', 'epsActual': 0.75, 'epsEstimate': 0.70215, 'epsDifference': 0.05, 'surprisePercent': 0.0681
+        },
+        {'quarter': '2025-03-31T00: 00: 00.000', 'epsActual': 0.33, 'epsEstimate': 0.4343, 'epsDifference': -0.1, 'surprisePercent': -0.2402
+        }
+    ], 'EPS': [
+        {'period': '0q', 'current': 0.98222, '7daysAgo': 1.00151, '30daysAgo': 1.05806, '60daysAgo': 1.37468, '90daysAgo': 1.63302
+        },
+        {'period': '+1q', 'current': 1.31927, '7daysAgo': 1.29944, '30daysAgo': 1.35185, '60daysAgo': 1.78897, '90daysAgo': 2.02491
+        },
+        {'period': '0y', 'current': 3.69816, '7daysAgo': 3.79056, '30daysAgo': 3.82584, '60daysAgo': 5.17082, '90daysAgo': 6.06409
+        },
+        {'period': '+1y', 'current': 5.66531, '7daysAgo': 5.77833, '30daysAgo': 5.96241, '60daysAgo': 7.18608, '90daysAgo': 8.15008
+        }
+    ]
+}

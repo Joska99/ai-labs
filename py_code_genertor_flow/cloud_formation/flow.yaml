@@ -1,0 +1,122 @@
+AWSTemplateFormatVersion: '2010-09-09'
+
+Parameters:
+  AccountId:
+    Type: String
+    Description: AWS Account ID
+  Name:
+    Type: String
+    Default: SimpleFlow_CodeGenerator
+    Description: Name prefix for resources
+  ModelId:
+    Type: String
+    Default: amazon.nova-micro-v1:0
+    Description: LLM model to use in the flow
+
+Resources:
+  BedrockFlowExecutionRole:
+    Type: AWS::IAM::Role
+    Properties:
+      RoleName: !Sub "${Name}-role"
+      AssumeRolePolicyDocument:
+        Version: '2012-10-17'
+        Statement:
+          - Effect: Allow
+            Principal:
+              Service: bedrock.amazonaws.com
+            Action: sts:AssumeRole
+            Condition:
+              StringEquals:
+                aws:SourceAccount: !Ref AccountId
+              ArnLike:
+                aws:SourceArn: !Sub ${BedrockFlow}
+      Policies:
+        - PolicyName: BedrockGetFlow
+          PolicyDocument:
+            Version: '2012-10-17'
+            Statement:
+              - Effect: Allow
+                Action: bedrock:GetFlow
+                Resource: !Sub ${BedrockFlow}
+
+        - PolicyName: BedrockInvokeModel
+          PolicyDocument:
+            Version: '2012-10-17'
+            Statement:
+              - Effect: Allow
+                Action: bedrock:InvokeModel
+                Resource:
+                  - arn:aws:bedrock:us-east-1::foundation-model/amazon.nova-micro-v1:0
+
+
+  BedrockFlow:
+    Type: AWS::Bedrock::Flow
+    Properties:
+      Name: !Ref Name
+      ExecutionRoleArn: !Sub "arn:aws:iam::${AccountId}:role/${Name}-role"
+      Description: A simple flow deployed using CloudFormation.
+      Definition:
+        Nodes:
+          - Type: Input
+            Name: code_sample_input
+            Outputs:
+              - Name: document
+                Type: String
+
+          - Type: Prompt
+            Name: write_py_code_prompt
+            Configuration:
+              Prompt:
+                SourceConfiguration:
+                  Inline:
+                    ModelId: !Ref ModelId
+                    TemplateType: TEXT
+                    InferenceConfiguration:
+                      Text:
+                        Temperature: 0.7
+                        TopP: 1
+                    TemplateConfiguration:
+                      Text:
+                        Text: "Write a python code that {{Code}}."
+            Inputs:
+              - Name: Code
+                Type: String
+                Expression: $.data
+            Outputs:
+              - Name: modelCompletion
+                Type: String
+
+          - Type: Output
+            Name: FlowOutput
+            Inputs:
+              - Name: document
+                Type: String
+                Expression: $.data
+
+        Connections:
+          - Name: Input_to_Prompt
+            Source: code_sample_input
+            Target: write_py_code_prompt
+            Type: Data
+            Configuration:
+              Data:
+                SourceOutput: document
+                TargetInput: Code
+
+          - Name: Prompt_to_Output
+            Source: write_py_code_prompt
+            Target: FlowOutput
+            Type: Data
+            Configuration:
+              Data:
+                SourceOutput: modelCompletion
+                TargetInput: document
+
+Outputs:
+  BedrockFlowArn:
+    Description: The ARN of the Bedrock Flow
+    Value: !Sub arn:aws:bedrock:${AWS::Region}:${AccountId}:flow/${BedrockFlow}
+
+  ExecutionRoleArn:
+    Description: The ARN of the IAM Role used by Bedrock Flow
+    Value: !Sub "arn:aws:iam::${AccountId}:role/${BedrockFlowExecutionRole}"
