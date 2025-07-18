@@ -19,4 +19,4 @@
 
 ## Test
 
-- [Prompts](./test/test.json)
+- [Prompts](./tests/test.json)

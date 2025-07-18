@@ -26,12 +26,17 @@ dist/
 build/
 builds/
 packages/
+instagrapi/
 **/fetch_stock_data.zip
 **/fetch-financial-data.zip
+**/generate_sale_page.zip
+**/app.zip
 **/yahoo_fin.zip
 **/packages.zip
 **/requests.zip
 **/requirements.zip
+**/instagram.zip
+**/instagrapi.zip
 **/generate-img.zip
 **/tf.plan
 
