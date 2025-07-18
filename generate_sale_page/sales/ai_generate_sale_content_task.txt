@@ -1,0 +1,53 @@
+🧠 TASK FOR AI: GENERATE PROMOTIONAL CONTENT FOR GROCERY STORE SALE
+
+🎯 OBJECTIVE:
+Create visually engaging and informative promotional content for a weekly grocery sale featuring 6 specific discounted products.
+
+📦 PRODUCTS TO FEATURE:
+1. 🍎 Apples – Original: $2.49 → Sale: $0.99
+2. 🥬 Lettuce – Original: $1.99 → Sale: $1.29
+3. 🥩 Ground Beef – Original: $6.99 → Sale: $4.99
+4. 🧀 Cheddar Cheese – Original: $4.50 → Sale: $3.00
+5. 🍞 Whole Wheat Bread – Original: $3.20 → Sale: $2.20
+6. 🥛 Milk 1 Gallon – Original: $3.89 → Sale: $2.99
+
+📅 SALE INFO:
+- Store Name: FreshMart
+- Sale Dates: July 10–17
+- Theme: “Weekly Deals to Fill Your Cart & Save Big!”
+
+📌 DELIVERABLES TO GENERATE:
+
+1. **PDF Flyer**
+   - Title: “FreshMart Weekly Deals – July 10–17”
+   - Include product names, sale prices, original prices, and product images
+   - Visually appealing layout with store logo and themed color palette (green/red/white)
+
+2. **Promotional Text Description**
+   - 2–3 sentences
+   - Tone: Friendly, clear, and promotional
+   - Mention 3 top deals and encourage in-store or online visit
+
+3. **HTML Product Section**
+   - A block of responsive HTML to embed on the grocery website
+   - Display each product with:
+     - Product name
+     - Original price (crossed out)
+     - Sale price (highlighted)
+     - Thumbnail image (placeholder links or generated)
+
+🧾 STYLE REQUIREMENTS:
+- Use warm and inviting colors (fresh greens, soft reds, white background)
+- Keep text readable and accessible (large fonts for prices)
+- Ensure content is web- and print-friendly
+
+
+✅ OUTPUT MUST BE:
+- Clear, professional, and visually attractive
+- Consistent branding for FreshMart
+- Accurate product names and pricing
+- Optimized for customer attention and click-through
+
+
+— Task Created by: Marketing Team Lead
+— Date Assigned: [Insert Date]
